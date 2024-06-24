@@ -18,6 +18,12 @@ CoreGui:SetCore("SendNotification", {
     Text = "欢迎"..game.Players.LocalPlayer.Name.."执行小凌中心",
     Duration = 5,
 })
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "你的注入器是？",
+    Text = "我....我的注入器是"..identifyexecutor().."",
+    Duration = 5,
+})
 print("冬凌中心滴反挂机已经为你开好了 喵~")
 		local vu = game:GetService("VirtualUser")
 		game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -67,7 +73,7 @@ end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/1mPger1J')))()
-local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."加载GUI",Name = "冬凌中心-NEO.UI-1.2.8", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
+local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-NEO.UI-1.2.8/修复版", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7734053495",
