@@ -72,13 +72,6 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-OrionLib:MakeNotification({
-	Name = "亲爱的:"..game.Players.LocalPlayer.Name.."冬凌中心加载完成.",
-	Content = "大哥这是缝合脚本啊",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-
-})
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/1mPger1J')))()
 local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-NEO.UI-1.2.8/修复版", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
