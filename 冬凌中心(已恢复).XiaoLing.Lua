@@ -72,6 +72,13 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
+OrionLib:MakeNotification({
+	Name = "亲爱的:"..game.Players.LocalPlayer.Name.."冬凌中心加载完成.",
+	Content = "大哥这是缝合脚本啊",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+
+})
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/1mPger1J')))()
 local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-NEO.UI-1.2.8/修复版", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
@@ -87,7 +94,59 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://7743866903",
   PremiumOnly = false
   })
-  
+
+  local Section = Tab:AddSection({
+
+	Name = "By：小凌.AEX"
+
+})
+Tab:AddSlider({
+
+	Name = "速度展示：",
+
+	Min = 16,
+
+	Max = 200,
+
+	Default = 16,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end    
+
+})
+Tab:AddSlider({
+
+	Name = "跳跃高度",
+
+	Min = 50,
+
+	Max = 200,
+
+	Default = 50,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end    
+
+})
+
  Tab:AddButton({
 	Name = "₪Krx(落叶中心)〔推荐〕",
 	Callback = function()
