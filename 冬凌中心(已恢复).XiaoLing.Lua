@@ -4,7 +4,7 @@ print("1")
 end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
-    Title = "已开启反挂机",
+    Title = "已开启反挂机、动态模糊",
     Text = "冬凌中心",
     Icon = "rbxassetid://16060333448",
     Duration = 60,
@@ -21,9 +21,40 @@ CoreGui:SetCore("SendNotification", {
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
     Title = "你的注入器是？",
-    Text = "我....我的注入器是"..identifyexecutor().."",
+    Text = "我....我的注入器是："..identifyexecutor().."",
     Duration = 5,
 })
+  	local camera = workspace.CurrentCamera
+local blurAmount = 10
+local blurAmplifier = 5
+local lastVector = camera.CFrame.LookVector
+
+local motionBlur = Instance.new("BlurEffect", camera)
+
+local runService = game:GetService("RunService")
+
+workspace.Changed:Connect(function(property)
+ if property == "CurrentCamera" then
+  print("Changed")
+  local camera = workspace.CurrentCamera
+  if motionBlur and motionBlur.Parent then
+   motionBlur.Parent = camera
+  else
+   motionBlur = Instance.new("BlurEffect", camera)
+  end
+ end
+end)
+
+runService.Heartbeat:Connect(function()
+ if not motionBlur or motionBlur.Parent == nil then
+  motionBlur = Instance.new("BlurEffect", camera)
+ end
+ 
+ local magnitude = (camera.CFrame.LookVector - lastVector).magnitude
+ motionBlur.Size = math.abs(magnitude)*blurAmount*blurAmplifier/2
+ lastVector = camera.CFrame.LookVector
+end)
+
 print("冬凌中心滴反挂机已经为你开好了 喵~")
 		local vu = game:GetService("VirtualUser")
 		game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -68,12 +99,12 @@ local function HeartbeatUpdate()
 	FrameUpdateTable[1] = LastIteration
 	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
 	CurrentFPS = CurrentFPS - CurrentFPS % 1
-	FpsLabel.Text = ("冬凌时间="..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+	FpsLabel.Text = ("冬凌时间 = "..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/1mPger1J')))()
-local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-NEO.UI-1.2.8/修复版", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
+local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-NEO.UI-1.2.9", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7734053495",
@@ -2370,8 +2401,15 @@ local Tab= Window:MakeTab({
 })
 Tab:AddButton({
   Name = "陈脚本",
-  Callback = function () loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\81\120\68\68\57\83\112\87\34\41\41\40\41")()
+  Callback = function () 
+getgenv().long = "陈脚本，加载时间长请耐心"loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\68\50\57\110\56\122\67\105\34\41\41\40\41\10")()
   end
+})
+Tab:AddButton({
+	Name = "复制陈脚本卡密",
+	Callback = function()
+	setclipboard("U2FsdGVkX1/gbhCW+xDOFYcV1pydxb/ni+9cAk72+WM=")
+end
 })
 Tab:AddButton({
   Name = "导管中心无需协议👍",
