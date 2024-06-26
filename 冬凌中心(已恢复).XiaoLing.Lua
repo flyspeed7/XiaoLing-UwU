@@ -5,7 +5,7 @@ end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
     Title = "已开启反挂机、动态模糊",
-    Text = "冬凌中心",
+    Text = "冬凌UwU",
     Icon = "rbxassetid://16060333448",
     Duration = 60,
     Callback = bindable,
