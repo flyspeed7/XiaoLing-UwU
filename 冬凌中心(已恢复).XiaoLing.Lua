@@ -113,6 +113,7 @@ local about = Window:MakeTab({
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
+about:AddParagraph("你好!小云我用了你的UI叫我删马上删除你的UI.","")
 local Tab = Window:MakeTab({
   Name = "₪通用",
   Icon = "rbxassetid://7743866903",
