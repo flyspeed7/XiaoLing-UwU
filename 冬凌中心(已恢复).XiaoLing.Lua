@@ -1027,7 +1027,7 @@ local Tab = Window:MakeTab({
 
 local Tab = Window:MakeTab({
   Name = "₪脚本中心",
-  Icon = "rbxassetid://4483345998",
+  Icon = "rbxassetid://7072725342",
   PremiumOnly = false
   })
   
