@@ -72,7 +72,7 @@ ImageLabel.Name = "Image"
 ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 ImageLabel.Position = UDim2.new(0.5, 0, 0.4, 0)
 ImageLabel.Size = UDim2.new(0.2, 0, 0.2, 0)
-ImageLabel.Image = "rbxassetid://10483855823"
+ImageLabel.Image = "rbxassetid://16060333448"
 ImageLabel.Parent = ScreenGui
 
 local TextLabel = Instance.new("TextLabel")
@@ -255,7 +255,7 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/XiaoYunCN/Orion-1/main/source'))()
+local OrionLib = loadstring(game:HttpG('https://raw.githubusercontent.com/flyspeed7/ShenJiaoBen/8bbcd1a30293fcf766cff342b1dd73578532347b/OrionLib.lua'))()
 local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.1", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
