@@ -2977,3 +2977,143 @@ Tab:AddButton({
   Callback = function () loadstring(game:HttpGet(("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\115\120\99\115\114\49\49\52\53\49\52\47\115\120\99\115\114\49\49\52\53\49\52\49\47\109\97\105\110\47\115\120\99\115\114\49\51\52\56\52\56\52\56\56\46\108\117\97"),true))()
   end
 })
+
+local Tab = Window:MakeTab({
+	Name = "起床战争",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "Demonic-HUB-V2",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Alan0947383/Demonic-HUB-V2/main/S-C-R-I-P-T.lua",true))()
+  end
+})
+
+Tab:AddButton({
+  Name = "VAPE4.0",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+  end
+})
+
+local Tab = Window:MakeTab({
+	Name = "活过杀手",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "CHaiRWre-HUB",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Milan08Studio/ChairWare/main/main.lua"))()
+  end
+})
+
+local Tab = Window:MakeTab({
+	Name = "基本都是混音FNF",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "Library-HUB",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/BasicallyFNF", true))()
+  end
+})
+local Tab = Window:MakeTab({
+	Name = "最强的战场",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "REPoaFWC",
+  Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/REPoaFWC/raw",true))();
+  end
+})
+
+Tab:AddButton({
+  Name = "Nicuse(需卡密)",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/SaitamaBattlegrounds.lua"))()
+  end
+})
+    
+    Tab:AddButton({
+  Name = "BadWare-Hub",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Hub/Load.lua", true))()
+  end
+})
+
+Tab:AddButton({
+  Name = "Battlegrounuds77",
+  Callback = function ()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Strongest/main/Battlegrounds77"))()
+  end
+})
+
+Tab:AddButton({
+	Name = "↑点击复制卡密↑",
+	Callback = function()
+     setclipboard("BestTheStrongest5412Roblox")
+  end
+})
+
+    local Tab = Window:MakeTab({
+	Name = "CW(战斗勇士)",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "无限体力",
+  Callback = function()
+loadstring(game:HttpGet("https://shz.al/~KSK"))()
+  end
+})
+
+Tab:AddButton({
+    Name = "锁头",
+    Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6RQGbFqD"))()
+    end
+})
+
+Tab:AddButton({
+  Name = "anonymous-HUB",
+  Callback = function()
+loadstring(game:HttpGet("https://paste.gg/p/anonymous/697fc3cad5f743508318cb7399e89432/files/b5923e52edab4e5c91e46b74563d0ae8/raw"))()
+  end
+})
+
+local Tab = Window:MakeTab({
+	Name = "自然灾害",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "指令",
+  Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+      end
+})
+
+Tab:AddButton({
+  Name = "Edgenra1spam1-HUB",
+  Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
+  end
+})
+
+Tab:AddButton({
+  Name = "TurkOyuncu99-HUB",
+  Callback = function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/7c75386107937fa006304efd24543ad4/raw/8d759dfcd95d39949c692735cfdf62baec0bf835/cafwetweg", true))()
+  end
+})
