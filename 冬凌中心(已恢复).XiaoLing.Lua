@@ -1,21 +1,3 @@
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "打开成功请等等谢谢",
-    Text = "小凌的提示",
-    Duration = 2,
-
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "↑小云：",
-    Text = "是的还在加载",
-    Duration = 3,
-
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "↑小凌：",
-    Text = "???你哪来的?😡😡😡",
-    Duration = 3,
-
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "Credits"
 ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
