@@ -1,10 +1,20 @@
-OrionLib:MakeNotification({
-	Name = "打开成功请等等...+",
-	Content = "小凌的提示",
-	Image = "rbxassetid://16060333448",
-	Time = 5
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "打开成功请等等谢谢",
+    Text = "小凌的提示",
+    Duration = 2,
 
-})
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "↑小云：",
+    Text = "是的还在加载",
+    Duration = 3,
+
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "↑小凌：",
+    Text = "???你哪来的?😡😡😡",
+    Duration = 3,
 
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "Credits"
@@ -172,20 +182,19 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
     Button1 = "谢谢",
     Button2 = "关闭"
 })
-OrionLib:MakeNotification({
-	Name = "一个欢迎!",
-	Content = "欢迎"..game.Players.LocalPlayer.Name.."使用冬凌中心",
-	Image = "rbxassetid://16060333448",
-	Time = 5
 
-})
-OrionLib:MakeNotification({
-	Name = "您的注入器是？",
-	Content = "我...我的注入器是："..identifyexecutor().."",
-	Image = "rbxassetid://16060333448",
-	Time = 6
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "冬凌中心的欢迎",
+    Text = "欢迎"..game.Players.LocalPlayer.Name.."执行小凌中心",
+    Duration = 5,
 
-})
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "你的注入器是？",
+    Text = "我....我的注入器是："..identifyexecutor().."",
+    Duration = 5,
+
   	local camera = workspace.CurrentCamera
 local blurAmount = 10
 local blurAmplifier = 5
@@ -272,11 +281,13 @@ local about = Window:MakeTab({
     Icon = "rbxassetid://7734053495",
     PremiumOnly = false
 })
+
 local Section = Tab:AddSection({
 
 	Name = "你好主人这是你的信息 喵~"
 
 })
+
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
@@ -289,7 +300,7 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
   })
 
-  local Section = Tab:AddSection({
+local Section = Tab:AddSection({
 
 	Name = "By：小凌.AEX"
 
