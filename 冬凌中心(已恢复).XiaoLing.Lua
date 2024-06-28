@@ -83,7 +83,7 @@ TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
 TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
-TextLabel.Text = "冬凌中心-1.3.1"
+TextLabel.Text = "冬凌中心-1.3.3"
 TextLabel.Parent = ScreenGui
 
 local function animateCredits()
@@ -256,7 +256,7 @@ end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/LOL/main/Orion.lua", true))()
-local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.1", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
+local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.3", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7734053495",
@@ -267,7 +267,7 @@ about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
 about:AddParagraph("你好!小云我用了你的UI叫我删马上删除你的UI.","")
 about:AddParagraph("大家多多支持小云、Krx、丁丁dingding等...脚本作者","")
-about:AddParagraph("再见!再也不玩水滴轮、路亚、雷蛙、铁板","")
+about:AddParagraph("快和我一起露关😡😡","")
 local Tab = Window:MakeTab({
   Name = "₪通用",
   Icon = "rbxassetid://7743866903",
