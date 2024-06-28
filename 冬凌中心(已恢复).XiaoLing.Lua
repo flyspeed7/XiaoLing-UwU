@@ -3091,6 +3091,20 @@ loadstring(game:HttpGet("https://paste.gg/p/anonymous/697fc3cad5f743508318cb7399
   end
 })
 
+Tab:AddButton({
+  Name = "Warriors-HUB",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))();
+  end
+})
+
+Tab:AddButton({
+  Name = "飞车",
+  Callback = function ()
+    loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+  end
+})
+
 local Tab = Window:MakeTab({
 	Name = "自然灾害",
 	Icon = "rbxassetid://7733779610",
@@ -3115,5 +3129,11 @@ Tab:AddButton({
   Name = "TurkOyuncu99-HUB",
   Callback = function()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/7c75386107937fa006304efd24543ad4/raw/8d759dfcd95d39949c692735cfdf62baec0bf835/cafwetweg", true))()
+  end
+})
+Tab:AddButton({
+  Name = "Hussain_HUB",
+  Callback = function ()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Natural Disaster'))()
   end
 })
