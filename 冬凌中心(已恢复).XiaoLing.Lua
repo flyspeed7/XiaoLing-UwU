@@ -6,20 +6,6 @@ OrionLib:MakeNotification({
 
 })
 
-Notification:Notify(
-    {Title = "↑小云：", Description = "是的对对对正在加载..."},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 3, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=16060333448", ImageColor = Color3.fromRGB(255, 84, 84)}
-)
-wait(1)
-
-Notification:Notify(
-    {Title = "↑小凌：", Description = "???你哪来的?😡😡😡"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 3.5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=16060333448", ImageColor = Color3.fromRGB(255, 84, 84)}
-)
-wait(1)
-
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "Credits"
 ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
