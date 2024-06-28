@@ -1,3 +1,9 @@
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "冬凌中心启动成功",
+    Text = "小凌的提示",
+    Duration = 5,
+
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "Credits"
 ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
@@ -3144,33 +3150,4 @@ Tab:AddButton({
   Callback = function ()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Natural Disaster'))()
   end
-})
-local Tab= Window:MakeTab({
-	Name = "一路向西",
-	Icon = "rbxassetid://7733779610",
-	PremiumOnly = false
-})
-Tab:AddButton({
-	Name = "防摔",
-	Callback = function()
-	loadstring(game:GetObjects("rbxassetid://10040712770")[1].Source)()
-	end
-})
-Tab:AddButton({
-	Name = "防套",
-	Callback = function()
-	loadstring(game:GetObjects("rbxassetid://10040719318")[1].Source)()
-	end
-})
-Tab:AddButton({
-	Name = "范围",
-	Callback = function()
-	loadstring(game:GetObjects("rbxassetid://10040722920")[1].Source)()
-	end
-})
-Tab:AddButton({
-	Name = "无后座",
-	Callback = function()
-	loadstring(game:GetObjects("rbxassetid://10040701935")[1].Source)()
-	end
 })
