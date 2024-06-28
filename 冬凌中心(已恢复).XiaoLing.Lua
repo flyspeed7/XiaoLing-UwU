@@ -1,3 +1,25 @@
+OrionLib:MakeNotification({
+	Name = "打开成功请等等...+",
+	Content = "小凌的提示",
+	Image = "rbxassetid://16060333448",
+	Time = 5
+
+})
+
+Notification:Notify(
+    {Title = "↑小云：", Description = "是的对对对正在加载..."},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 3, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=16060333448", ImageColor = Color3.fromRGB(255, 84, 84)}
+)
+wait(1)
+
+Notification:Notify(
+    {Title = "↑小凌：", Description = "???你哪来的?😡😡😡"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 3.5, Type = "image"},
+    {Image = "http://www.roblox.com/asset/?id=16060333448", ImageColor = Color3.fromRGB(255, 84, 84)}
+)
+wait(1)
+
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "Credits"
 ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
@@ -102,7 +124,7 @@ end
 
 animateCredits()
 
-local creditText = "作者：小凌,谢谢"
+local creditText = "看这里看这里! 作者是？：小凌.AEX!"
 local creditDuration = 5
 
 local decalIds = {
@@ -164,17 +186,19 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
     Button1 = "谢谢",
     Button2 = "关闭"
 })
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "冬凌中心的欢迎",
-    Text = "欢迎"..game.Players.LocalPlayer.Name.."执行小凌中心",
-    Duration = 5,
+OrionLib:MakeNotification({
+	Name = "一个欢迎!",
+	Content = "欢迎"..game.Players.LocalPlayer.Name.."使用冬凌中心",
+	Image = "rbxassetid://16060333448",
+	Time = 5
+
 })
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "你的注入器是？",
-    Text = "我....我的注入器是："..identifyexecutor().."",
-    Duration = 5,
+OrionLib:MakeNotification({
+	Name = "您的注入器是？",
+	Content = "我...我的注入器是："..identifyexecutor().."",
+	Image = "rbxassetid://16060333448",
+	Time = 6
+
 })
   	local camera = workspace.CurrentCamera
 local blurAmount = 10
@@ -251,7 +275,7 @@ local function HeartbeatUpdate()
 	FrameUpdateTable[1] = LastIteration
 	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
 	CurrentFPS = CurrentFPS - CurrentFPS % 1
-	FpsLabel.Text = ("冬凌时间 = "..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+	FpsLabel.Text = ("凌冬时间 = "..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
@@ -261,6 +285,11 @@ local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7734053495",
     PremiumOnly = false
+})
+local Section = Tab:AddSection({
+
+	Name = "你好主人这是你的信息 喵~"
+
 })
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
@@ -3136,4 +3165,33 @@ Tab:AddButton({
   Callback = function ()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Natural Disaster'))()
   end
+})
+local Tab= Window:MakeTab({
+	Name = "一路向西",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "防摔",
+	Callback = function()
+	loadstring(game:GetObjects("rbxassetid://10040712770")[1].Source)()
+	end
+})
+Tab:AddButton({
+	Name = "防套",
+	Callback = function()
+	loadstring(game:GetObjects("rbxassetid://10040719318")[1].Source)()
+	end
+})
+Tab:AddButton({
+	Name = "范围",
+	Callback = function()
+	loadstring(game:GetObjects("rbxassetid://10040722920")[1].Source)()
+	end
+})
+Tab:AddButton({
+	Name = "无后座",
+	Callback = function()
+	loadstring(game:GetObjects("rbxassetid://10040701935")[1].Source)()
+	end
 })
