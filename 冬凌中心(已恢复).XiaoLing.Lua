@@ -1,9 +1,3 @@
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "冬凌中心启动成功",
-    Text = "小凌的提示",
-    Duration = 5,
-
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "Credits"
 ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
@@ -268,12 +262,6 @@ local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7734053495",
     PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-
-	Name = "你好主人这是你的信息 喵~"
-
 })
 
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
