@@ -83,7 +83,7 @@ TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
 TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
-TextLabel.Text = "冬凌中心-1.3.3"
+TextLabel.Text = "冬凌中心-1.3.5"
 TextLabel.Parent = ScreenGui
 
 local function animateCredits()
@@ -244,7 +244,7 @@ end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/LOL/main/Orion.lua", true))()
-local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.3", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
+local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.5", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7734053495",
@@ -744,10 +744,15 @@ end)
 })
 
 Tab:AddButton({
-	Name = "飞行装备（可控制物体）",
-	Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/zaochuan2"))()		
+	Name = "控制玩家(小凌汉化)谢谢",
+	Callback = function()	loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/XiaoLing-CODE.tk3usj449llspw1/main/%E7%8E%A9%E5%AE%B6%E6%8E%A7%E5%88%B6%20%E6%B1%89%E5%8C%96.txt"))()
   	end
+})
+
+local Section = Tab:AddSection({
+
+	Name = "下面是自定义等..."
+
 })
 
 Tab:AddTextbox({
@@ -760,7 +765,7 @@ Tab:AddTextbox({
 })
 
  Tab:AddTextbox({
-	Name = "跳跃高度Copy How-Hiw",
+	Name = "跳跃高度",
 	Default = "Jump",
 	TextDisappear = true,
 	Callback = function(Value)
