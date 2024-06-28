@@ -164,19 +164,6 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
     Button1 = "谢谢",
     Button2 = "关闭"
 })
-
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "冬凌中心的欢迎",
-    Text = "欢迎"..game.Players.LocalPlayer.Name.."执行小凌中心",
-    Duration = 5,
-
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-    Title = "你的注入器是？",
-    Text = "我....我的注入器是："..identifyexecutor().."",
-    Duration = 5,
-
   	local camera = workspace.CurrentCamera
 local blurAmount = 10
 local blurAmplifier = 5
