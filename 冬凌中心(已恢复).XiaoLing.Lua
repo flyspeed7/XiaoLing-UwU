@@ -258,7 +258,7 @@ about:AddParagraph("你好!小云我用了你的UI叫我删马上删除你的UI.
 about:AddParagraph("大家多多支持小云、Krx、丁丁dingding等...脚本作者","")
 about:AddParagraph("快和我一起露关😡😡","")
 local Tab= Window:MakeTab({
-	Name = "很火的脚本",
+	Name = "微火的脚本",
 	Icon = "rbxassetid://7733798747",
 	PremiumOnly = false
 })
@@ -278,6 +278,76 @@ Tab:AddButton({
 	Callback = function()
      setclipboard("bin2024HADE")
   	end
+})
+
+local Tab= Window:MakeTab({
+	Name = "可加入的服务器",
+	Icon = "rbxassetid://7734053426",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "加入极速传奇",
+  Callback = function ()
+    local game_id = 3101667897
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
+})
+Tab:AddButton({
+  Name = "加入鲨口求生2",
+  Callback = function ()
+  local game_id = 8908228901
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer) 
+  end 
+})
+Tab:AddButton({
+  Name = "加入监狱人生",
+  Callback = function ()
+    local game_id = 155615604
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
+})
+Tab:AddButton({
+  Name = "加入忍者传奇",
+  Callback = function ()
+    local game_id = 3956818381
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
+})
+Tab:AddButton({
+  Name = "加入Break in",
+  Callback = function ()
+    local game_id = 1318971886
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
+})
+Tab:AddButton({
+  Name = "加入自然灾害Game",
+  Callback = function ()
+    local game_id = 189707
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
+})
+Tab:AddButton({
+  Name = "加入力量传奇",
+  Callback = function ()
+    local game_id = 3623096087
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
+})
+Tab:AddButton({
+  Name = "加入餐厅大亨2",
+  Callback = function ()
+    local game_id = 3398014311
+        local game_url = "https://www.roblox.com/games/"..game_id
+        game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
+  end
 })
 
 local Tab = Window:MakeTab({
@@ -2711,7 +2781,7 @@ Tab:AddParagraph("群友提供")
 
 local Tab= Window:MakeTab({
 	Name = "小凌-执行器",
-	Icon = "rbxassetid://7733779610",
+	Icon = "rbxassetid://8997388548",
 	PremiumOnly = false
 })
 Tab:AddButton({
@@ -3154,3 +3224,16 @@ Tab:AddButton({
     loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Natural Disaster'))()
   end
 })
+
+local Tab= Window:MakeTab({
+	Name = "特殊脚本",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "FE-猫娘Pendulum Hub",
+  Callback = function ()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))() 
+  end
+})
+Tab:AddParagraph("角色变身?")
