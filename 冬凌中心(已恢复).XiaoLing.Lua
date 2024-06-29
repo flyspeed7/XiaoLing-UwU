@@ -247,7 +247,7 @@ local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Xiao
 local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.5", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
-    Icon = "rbxassetid://7734053495",
+    Icon = "rbxassetid://7743878358",
     PremiumOnly = false
 })
 
@@ -257,6 +257,29 @@ about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
 about:AddParagraph("你好!小云我用了你的UI叫我删马上删除你的UI.","")
 about:AddParagraph("大家多多支持小云、Krx、丁丁dingding等...脚本作者","")
 about:AddParagraph("快和我一起露关😡😡","")
+local Tab= Window:MakeTab({
+	Name = "很火的脚本",
+	Icon = "rbxassetid://7733798747",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "情云脚本",
+  Callback = function ()
+   loadstring(utf8.char((function() return table.unpack({108,111,97,100,115,116,114,105,110,103,40,103,97,109,101,58,72,116,116,112,71,101,116,40,34,104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,67,104,105,110,97,81,89,47,45,47,109,97,105,110,47,37,69,54,37,56,51,37,56,53,37,69,52,37,66,65,37,57,49,34,41,41,40,41})end)()))() 
+  end
+})
+Tab:AddButton({
+  Name = "斌脚本2.0.1",
+  Callback = function () loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\66\73\78\106\105\97\111\98\122\120\54\47\66\73\78\106\105\97\111\47\109\97\105\110\47\66\73\78\46\108\117\97\34\41\41\40\41\10")("BIN制作")
+  end
+})
+Tab:AddButton({
+	Name = "复制斌脚本卡密",
+	Callback = function()
+     setclipboard("bin2024HADE")
+  	end
+})
+
 local Tab = Window:MakeTab({
   Name = "₪通用",
   Icon = "rbxassetid://7743866903",
