@@ -3236,4 +3236,16 @@ Tab:AddButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))() 
   end
 })
+Tab:AddButton({
+  Name = "特别大的...",
+  Callback = function ()
+  loadstring(game:HttpGet("https://pastebin.com/raw/ESWSFND7", true))()
+  end
+})
+Tab:AddButton({
+  Name = "骑到别人头上",
+  Callback = function ()
+  loadstring(game:HttpGet('https://pastebin.com/raw/bzmhRgKL'))()
+  end
+})
 Tab:AddParagraph("角色变身?")
