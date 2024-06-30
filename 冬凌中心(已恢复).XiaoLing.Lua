@@ -1156,7 +1156,7 @@ end
 
 local Tab = Window:MakeTab({
   Name = "₪极速传奇",
-  Icon = "rbxassetid://7072725342",
+  Icon = "rbxassetid://7072719338",
   PremiumOnly = false
   })
   
