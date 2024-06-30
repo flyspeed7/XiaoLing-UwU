@@ -354,6 +354,11 @@ local Tab= Window:MakeTab({
 	Icon = "rbxassetid://7743866529",
 	PremiumOnly = false
 })
+local Section = Tab:AddSection({
+
+	Name = "以下为老外脚本😨😡🤓😂🤮🤣😎😒🤔"
+
+})
 Tab:AddButton({
 	Name = "10 Robux",
 	Callback = function()
@@ -386,6 +391,7 @@ Tab:AddTextbox({
 		game.Players.LocalPlayer.Character.Humanoid.Health = Value
 	end	 
 })
+Tab:AddParagraph("自定义需要大退重进")
 local Tab = Window:MakeTab({
   Name = "₪通用",
   Icon = "rbxassetid://7743866903",
