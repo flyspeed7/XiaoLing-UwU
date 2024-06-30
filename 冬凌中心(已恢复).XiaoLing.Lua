@@ -83,7 +83,7 @@ TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
 TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
-TextLabel.Text = "R.I.P"
+TextLabel.Text = "死马! R.I.P 死马!"
 TextLabel.Parent = ScreenGui
 
 local function animateCredits()
