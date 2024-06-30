@@ -72,7 +72,7 @@ ImageLabel.Name = "Image"
 ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 ImageLabel.Position = UDim2.new(0.5, 0, 0.4, 0)
 ImageLabel.Size = UDim2.new(0.2, 0, 0.2, 0)
-ImageLabel.Image = "rbxassetid://6031302932"
+ImageLabel.Image = "rbxassetid://17380752452"
 ImageLabel.Parent = ScreenGui
 
 local TextLabel = Instance.new("TextLabel")
