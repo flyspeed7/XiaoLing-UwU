@@ -450,6 +450,14 @@ Tab:AddSlider({
 
 })
 
+Tab:AddColorpicker({ 
+ Name = "颜色选择器", 
+ Default = Color3.fromRGB(255, 0, 0), 
+ Callback = function(Value) 
+     print(Value) 
+ end           
+ }) 
+  
  Tab:AddButton({
 	Name = "₪Krx(落叶中心)〔推荐〕",
 	Callback = function()
