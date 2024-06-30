@@ -450,6 +450,13 @@ Tab:AddSlider({
 
 })
 
+Tab:AddButton({
+	Name = "加速能量条",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/nengliangtiao"))()
+	end
+})
+
 Tab:AddColorpicker({ 
  Name = "颜色选择器", 
  Default = Color3.fromRGB(255, 0, 0), 
