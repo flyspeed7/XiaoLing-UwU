@@ -3365,3 +3365,217 @@ end
 end
   end
 })
+local Tab= Window:MakeTab({
+	Name = "巴掌大战",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "Random-V3",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomScriptr3/gggggggg/main/lolez.txt", true))()
+  end
+})
+Tab:AddButton({
+  Name = "Understand-Hub",
+  Callback = function () loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
+  end
+})
+
+Tab:AddButton({
+  Name = "普通",
+  Callback = function ()
+      	loadstring(game:HttpGet("https://scriptblox.com/raw/UPDATE-Slap-Battles-OP-RC-HUB-9830"))()
+  end
+})
+
+Tab:AddButton({ 
+	Name = "Tmaster-HUB",
+	Callback = function()
+      	loadstring(game:HttpGet("https://scriptblox.com/raw/Slap-Battles-Scriptmaster-Hub-10755"))()
+  end
+})
+
+Tab:AddButton({ 
+	Name = "大逃杀",
+	Callback = function()  	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
+  end
+})
+local Tab= Window:MakeTab({
+	Name = "成为跑酷忍者",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({ 
+	Name = "README",
+	Callback = function()
+        -------hit sub and like! THNKYOU!  -JA1R4 GAMING----
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Min1273/n-to/main/README.md"))()
+  	end
+})
+
+local Tab = Window:MakeTab({
+	Name = "更多的脚本中心",
+	Icon = "rbxassetid://7733799185",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "MenBF脚本",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TUPERX/TUPERX/Main/MenuBF/README.md'))()
+   	end
+})
+Tab:AddButton({
+	Name = "X中枢",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NeaPchX2/Playback-X-HUB/main/Protected.lua.txt"))()
+   	end
+})
+ Tab:AddButton({
+	Name = "脚本Break in",
+	Callback = function()	
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/script/main/fusion1'))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "主X集线器",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BlodyXHub/Xeniel_All/main/ForAll"))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "中心",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
+   	end
+})
+ Tab:AddButton({
+	Name = "HOHO",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "PL",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WindowsXp12/BlxzeRBLX/main/BLxzeHub.lua"))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "中心",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/NeaPchX2/2XHUB-UPDBIG/main/README.md', true))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "X中心",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/sxnumz/Script/main/SxnumzHubFree.txt'))();
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "不可用",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MrMaxNaJaEz/New-MrMaxNaJa-NaJa/main/README.md"))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "东中心",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/EastHub/main/lua"))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "千叶中心",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHuB/main/Chiba-BF.txt'))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "纳尔中心",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/One-x-HUB/main/README.md"))()
+   	end
+})
+ 
+Tab:AddButton({
+	Name = "ZHP",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader", true))()
+   	end
+})
+Tab:AddButton({
+	Name = "外国中心",
+	Callback = function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Putaya/HITBOXKAK/main/PutayaFree"), true))()
+   	end
+})
+
+Tab:AddButton({
+	Name = "邪恶",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Natthawat69/EvilHub-FREE/main/Script.lua"))()
+   	end
+})
+Tab:AddButton({
+	Name = "项目",
+	Callback = function()
+loadstring(game:HttpGet"https://rawscripts.net/raw/Project-Meow_421")()
+   	end
+})
+Tab:AddButton({
+	Name = "主",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
+   	end
+})
+Tab:AddButton({
+	Name = "OUW",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/slightten/ouwHub/main/ouwHub'))()
+   	end
+})
+Tab:AddButton({
+	Name = "SMZ",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
+   	end
+})
+Tab:AddButton({
+	Name = "岩浆中心",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/accountnop/magmaisgay/main/magma", true))()
+   	end
+})
+ Tab:AddButton({
+	Name = "标志武器",
+	Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/dhsHESsm'))()
+   	end
+})
+Tab:AddButton({
+    Name = "能力中心",
+    Callback = function()
+        local SET_UP = CustomLoader("能力中心|加载...", "json", {
+            URL = "https://raw.githubusercontent.com/Hanabi112/Ability-Hub-Free-Script/main/Abiliity-Hub.json";
+        })();
+    end,
+})
+ 
+Tab:AddButton({
+	Name = "元仓库",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/x2FIWz/SCRIPT/main/MOBILE/METAWARE.lua'))()
+  	end
+})
