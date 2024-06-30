@@ -394,7 +394,7 @@ Tab:AddTextbox({
 Tab:AddParagraph("自定义需要大退重进")
 local Tab = Window:MakeTab({
   Name = "₪通用",
-  Icon = "rbxassetid://7743866903",
+  Icon = "rbxassetid://7733970494",
   PremiumOnly = false
   })
 
@@ -449,14 +449,12 @@ Tab:AddSlider({
 	end    
 
 })
-
 Tab:AddButton({
 	Name = "加速能量条",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/nengliangtiao"))()
 	end
 })
-
 Tab:AddColorpicker({ 
  Name = "颜色选择器", 
  Default = Color3.fromRGB(255, 0, 0), 
