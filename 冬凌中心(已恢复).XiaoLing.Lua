@@ -83,7 +83,7 @@ TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
 TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
-TextLabel.Text = "冬凌中心-1.3.5"
+TextLabel.Text = "你好这里是：冬凌中心-1.3.7喵~"
 TextLabel.Parent = ScreenGui
 
 local function animateCredits()
@@ -243,8 +243,8 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/LOL/main/Orion.lua", true))()
-local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.5", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.7", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7743878358",
@@ -349,7 +349,43 @@ Tab:AddButton({
         game:GetService("TeleportService"):Teleport(game_id, game.Players.LocalPlayer)
   end
 })
-
+local Tab= Window:MakeTab({
+	Name = "老外获得罗宝",
+	Icon = "rbxassetid://7743866529",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "10 Robux",
+	Callback = function()
+game.Players.LocalPlayer:Kick('获取10Robux完成，请到通知查看')
+end
+})
+Tab:AddButton({
+	Name = "20Robux",
+	Callback = function()
+game.Players.LocalPlayer:Kick('获取20Robux完成，请到通知查看')
+end
+})
+Tab:AddButton({
+	Name = "50Robux",
+	Callback = function()
+game.Players.LocalPlayer:Kick('获取50Robux完成，请到通知查看')
+end
+})
+Tab:AddButton({
+	Name = "100Robux",
+	Callback = function()
+game.Players.LocalPlayer:Kick('臭傻屌被骗了吧😭😰😡😂🤓🤮😒🤣😎')
+end
+})
+Tab:AddTextbox({
+	Name = "自定义Robux",
+	Default = "Robux",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.Health = Value
+	end	 
+})
 local Tab = Window:MakeTab({
   Name = "₪通用",
   Icon = "rbxassetid://7743866903",
