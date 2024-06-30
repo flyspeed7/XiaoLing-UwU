@@ -3301,9 +3301,38 @@ Tab:AddButton({
 	PremiumOnly = false
 })
 Tab:AddButton({
-  Name = "FRKFX-Hub",
+  Name = "lsaaaKK-Hub",
   Callback = function ()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IsaaaKK/cwhb/main/cw.txt"))()
+  end
+})
+Tab:AddButton({
+  Name = "打死光环",
+  Callback = function ()
+   loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))() 
+  end
+})
+Tab:AddButton({
+  Name = "Nova-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/novahub"))()
+  end
+})
+Tab:AddButton({
+  Name = "NOVA-Hub_Source2.0",
+  Callback = function () loadstring(game:HttpGet("https://raw.githubusercontent.com/SussyImposterRed/Scripts/main/NOVA_HUB_SOURCE"))()
+  end
+})
+Tab:AddButton({
+  Name = "Wen-NOVA1.15",
+  Callback = function ()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/SussyImposterRed/Scripts/main/NEW_NOVA"))()
+  end
+})
+Tab:AddButton({
+  Name = "Top-G_Hub",
+  Callback = function ()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/leakediz/top-g/main/combat%20warriors"))()
   end
 })
 Tab:AddButton({
