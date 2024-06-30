@@ -72,7 +72,7 @@ ImageLabel.Name = "Image"
 ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 ImageLabel.Position = UDim2.new(0.5, 0, 0.4, 0)
 ImageLabel.Size = UDim2.new(0.2, 0, 0.2, 0)
-ImageLabel.Image = "rbxassetid://17380752452"
+ImageLabel.Image = "rbxassetid://1719752352882"
 ImageLabel.Parent = ScreenGui
 
 local TextLabel = Instance.new("TextLabel")
@@ -83,7 +83,7 @@ TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
 TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
-TextLabel.Text = "死马! R.I.P 死马!"
+TextLabel.Text = "这里是:冬凌中心1.3.7喵~"
 TextLabel.Parent = ScreenGui
 
 local function animateCredits()
