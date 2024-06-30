@@ -459,7 +459,7 @@ Tab:AddColorpicker({
  }) 
   
  Tab:AddButton({
-	Name = "₪Krx(落叶中心)〔推荐〕",
+	Name = "₪Krx(LS落叶中心)〔推荐〕",
 	Callback = function()
 getgenv().LS="落叶中心" loadstring(game:HttpGet("https://raw.githubusercontent.com/krlpl/Deciduous-center-LS/main/%E8%90%BD%E5%8F%B6%E4%B8%AD%E5%BF%83%E6%B7%B7%E6%B7%86.txt"))()
 end
