@@ -72,7 +72,7 @@ ImageLabel.Name = "Image"
 ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 ImageLabel.Position = UDim2.new(0.5, 0, 0.4, 0)
 ImageLabel.Size = UDim2.new(0.2, 0, 0.2, 0)
-ImageLabel.Image = "rbxassetid://1719752352882"
+ImageLabel.Image = "rbxassetid://16060333448"
 ImageLabel.Parent = ScreenGui
 
 local TextLabel = Instance.new("TextLabel")
@@ -3211,7 +3211,18 @@ Tab:AddButton({
 	Icon = "rbxassetid://7733779610",
 	PremiumOnly = false
 })
-
+Tab:AddButton({
+  Name = "FRKFX-Hub",
+  Callback = function ()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))()
+  end
+})
+Tab:AddButton({
+  Name = "1foyt-HUB",
+  Callback = function ()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/novahub"))()
+  end
+})
 Tab:AddButton({
   Name = "无限体力",
   Callback = function()
