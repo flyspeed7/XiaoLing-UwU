@@ -3507,6 +3507,13 @@ end
 end
   end
 })
+Tab:AddButton({
+  Name = "Arsonia-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/The3Bakers4565/Spicy-Bagel/main/Other/Arsenal/Less_FileSize/Arsonia_UI.lua"))()
+  end
+})
+
 local Tab= Window:MakeTab({
 	Name = "巴掌大战",
 	Icon = "rbxassetid://7733779610",
