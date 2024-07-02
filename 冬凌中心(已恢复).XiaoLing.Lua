@@ -4060,3 +4060,570 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/RakeEvolved/Stable/Source.lua"))()
   end
 })
+local Tab= Window:MakeTab({
+	Name = "玩家",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "自瞄(区分团队)",
+  Callback = function ()
+    local fov = 100
+local maxTransparency = 0.1 -- TransparÃªncia mÃ¡xima dentro do cÃ­rculo (0.1 = 10% de transparÃªncia)
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local Teams = game:GetService("Teams") -- Adicione esta linha para acessar os times
+local Cam = game.Workspace.CurrentCamera
+
+local FOVring = Drawing.new("Circle")
+FOVring.Visible = true
+FOVring.Thickness = 2
+FOVring.Color = Color3.fromRGB(128, 0, 128) -- Cor roxa
+FOVring.Filled = false
+FOVring.Radius = fov
+FOVring.Position = Cam.ViewportSize / 2
+FOVring.Transparency = 0.1 -- TransparÃªncia inicial igual ao segundo script
+
+local function updateDrawings()
+    local camViewportSize = Cam.ViewportSize
+    FOVring.Position = camViewportSize / 2
+end
+
+local function onKeyDown(input)
+    if input.KeyCode == Enum.KeyCode.Delete then
+        RunService:UnbindFromRenderStep("FOVUpdate")
+        FOVring:Remove()
+    end
+end
+
+UserInputService.InputBegan:Connect(onKeyDown)
+
+local function lookAt(target)
+    local lookVector = (target - Cam.CFrame.Position).unit
+    local newCFrame = CFrame.new(Cam.CFrame.Position, Cam.CFrame.Position + lookVector)
+    Cam.CFrame = newCFrame
+end
+
+local function calculateTransparency(distance)
+    -- Ajuste a transparÃªncia com base na distÃ¢ncia do centro do cÃ­rculo
+    local maxDistance = fov -- A distÃ¢ncia mÃ¡xima do centro do cÃ­rculo
+    local transparency = (1 - (distance / maxDistance)) * maxTransparency
+    return transparency
+end
+
+local function getClosestPlayerInFOV(trg_part)
+    local nearest = nil
+    local last = math.huge
+    local playerMousePos = Cam.ViewportSize / 2
+    local localPlayer = Players.LocalPlayer
+    local localPlayerTeam = localPlayer.Team
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= localPlayer then
+            local part = player.Character and player.Character:FindFirstChild(trg_part)
+            if part then
+                local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
+                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                
+                -- Adicione uma verificaÃ§Ã£o de equipe aqui
+                if isVisible and distance < fov and player.Team ~= localPlayerTeam then
+                    if distance < last then
+                        last = distance
+                        nearest = player
+                    end
+                end
+            end
+        end
+    end
+
+    return nearest
+end
+
+RunService.RenderStepped:Connect(function()
+    updateDrawings()
+    local closest = getClosestPlayerInFOV("Head")
+    if closest and closest.Character:FindFirstChild("Head") then
+        lookAt(closest.Character.Head.Position)
+
+        if closest then
+            local ePos, isVisible = Cam:WorldToViewportPoint(closest.Character.Head.Position)
+            local distance = (Vector2.new(ePos.x, ePos.y) - (Cam.ViewportSize / 2)).Magnitude
+            FOVring.Transparency = calculateTransparency(distance)
+        else
+            FOVring.Transparency = 0.1 -- Mantenha completamente visÃ­vel quando nenhum jogador estiver no FOV
+        end
+    else
+        FOVring.Transparency = 0.1 -- Mantenha completamente visÃ­vel quando nenhum jogador estiver no FOV
+    end
+end)
+
+  end
+})
+Tab:AddButton({
+  Name = "自瞄、区分墙壁、团队",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Dustin21335/Universal-aimbot-Roblox/main/Aimbot.lua"))()
+  end
+})
+Tab:AddButton({
+  Name = "Index-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEmptynessProject/EmptynessProject/main/index.lua"))()
+  end
+})
+Tab:AddButton({
+  Name = "Air-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
+  end
+})
+Tab:AddButton({
+  Name = "NEXUS-HUB",
+  Callback = function ()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/13B8B/NEXUS/main/loadstring'))()
+  end
+})
+Tab:AddButton({
+  Name = "无声瞄准",
+  Callback = function ()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/fff/main/weaponry'))()
+  end
+})
+Tab:AddButton({
+  Name = "AlphaZero-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/AlphaZero/main/Loader.lua"))()
+  end
+})
+Tab:AddButton({
+  Name = "射速、聚点、无后、秒换蛋",
+  Callback = function ()
+  -- // Variables
+
+getgenv().fireRate = 0.01
+getgenv().reloadTime = 0
+
+-- // Code
+
+local a;
+a = hookmetamethod(game, "__namecall", function(self, ...)
+   local method = getnamecallmethod()
+   if method == "Play" and tostring(self):lower():find("reload") and reloadTime == 0 then
+       return true
+   end
+
+   return a(self, ...)
+end)
+
+local localPlayer = game:GetService("Players").LocalPlayer
+local playerScripts = localPlayer.PlayerScripts
+local weaponFramework = playerScripts.WeaponryFramework
+
+local currentWeapons;
+for i, v in pairs(getsenv(weaponFramework)) do
+   if typeof(v) == "function" and i == "OpenInventoryManager" then
+       currentWeapons = getupvalues(v)[5]
+   end
+end
+
+task.spawn(function()
+   while task.wait(1) do
+       for i, v1 in pairs(currentWeapons) do
+           local v = v1.WeaponStats
+           if not v1.CurrentAmmo then continue end
+
+           v.BloomResetTime = 0
+           v.MaxBloom = 0
+           v.Reload_Start = 0
+           v.Reload_Insert = 0
+           v.Reload_EndTime = 0
+           v.Reload_PerAmmo = 0
+           if v.Spread then
+               for i1, v2 in pairs(v.Spread) do
+                   v.Spread[i1] = Vector3.new(0,0,0)
+               end
+           end
+
+           rawset(v, "FireRate", fireRate)
+           rawset(v, "Reload_TotalTime", reloadTime)
+           rawset(v, "Reload_AmmoFull", reloadTime)
+           rawset(v, "EquipTime", 0)
+           rawset(v, "Range", math.huge)
+           rawset(v, "RecoilData", {
+               ["y"] = {
+                   ["Damper"] = 0,
+                   ["Speed"] = 0,
+                   ["MaxAngle"] = 0,
+                   ["ADSreduction"] = 0,
+                   ["MinAngle"] = 0
+               },
+               ["x"] = {
+                   ["Damper"] = 0,
+                   ["Speed"] = 0,
+                   ["MaxAngle"] = 0,
+                   ["ADSreduction"] = 0,
+                   ["MinAngle"] = 0
+               },
+               ["z"] = {
+                   ["Damper"] = 0,
+                   ["Speed"] = 0,
+                   ["MaxAngle"] = 0,
+                   ["ADSreduction"] = 0,
+                   ["MinAngle"] = 0
+               }
+           })
+
+           if v.Animations and v.Animations.reload then
+               for i, v in pairs(v.Animations.reload.SoundTimeStamps) do
+                   rawset(v, "Time", 0)
+               end
+           end
+       end
+   end
+end)
+  end
+})
+Tab:AddButton({
+  Name = "自瞄、ESP",
+  Callback = function ()
+    if not game:IsLoaded() then
+    game.Loaded:Wait();
+end
+
+local Tick = tick();
+
+local Functions = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Uvxtq/Custom-Lua-Functions/main/Loader.lua"))();
+local rconsolelog = Functions.rconsolelog;
+local filtergc = Functions.filtergc;
+local ESP = Functions.ESP;
+
+local rconsoletop = rconsoletop or function() end;
+
+rconsolename("Weaponry Debug Console");
+rconsoleclear();
+rconsoletop(true)
+
+local Services = setmetatable({},{
+    __index = function(self, Index)
+        local Service = game:GetService(Index);
+
+        if Service then
+            self[Index] = Service;
+
+            return Service;
+        end
+    end,
+})
+
+LPH_NO_UPVALUES = function(...) return ... end;
+
+local Linoria = "https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/";
+
+local Library = loadstring(game:HttpGet((Linoria .. 'Library.lua')))();
+
+local ThemeManager = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Uvxtq/Project-AlphaZero/main/AlphaZero/Theme%20Manager.lua")))();
+local SaveManager = loadstring(game:HttpGet(Linoria .. 'addons/SaveManager.lua'))();
+
+local Players = Services.Players;
+local LocalPlayer = Players.LocalPlayer;
+local Camera = workspace.CurrentCamera;
+local Mouse = LocalPlayer:GetMouse();
+
+local TeamCheck = false;
+
+LocalPlayer.CharacterAdded:Connect(function()
+    if #Services.Teams:GetTeams() ~= 0 then
+        TeamCheck = true;
+
+        ESP:DeInit();
+
+        ESP:Init({"Box", "Nametag"}, {
+            Color = Color3.fromRGB(255, 255, 255),
+            TeamCheck = TeamCheck,
+            Distance = 1000,
+            Rainbow = true,
+        });
+    else
+        TeamCheck = false;
+
+        ESP:DeInit();
+
+        ESP:Init({"Box", "Nametag"}, {
+            Color = Color3.fromRGB(255, 255, 255),
+            TeamCheck = TeamCheck,
+            Distance = 1000,
+            Rainbow = true,
+        });
+    end
+end)
+
+if #Services.Teams:GetTeams() ~= 0 then
+    TeamCheck = true;
+else
+    TeamCheck = false;
+end
+
+if not LocalPlayer.Character then
+    rconsolelog("Error", "Character not found, waiting for character to load");
+
+    LocalPlayer.CharacterAdded:Wait();
+
+    rconsolelog("Success", "Character loaded");
+end
+
+rconsolelog("Loading", "Finding important functions in gc");
+
+local ReloadWeapon = filtergc("function", {
+	Name = "reloadWeapon"
+}, true)
+
+local InventoryManager = filtergc("function", {
+	Name = "InventoryManager"
+}, true)
+
+
+local FireWeapon = filtergc("function", {
+    Name = "FireWeapon"
+}, true)
+
+rconsolelog("Info", "Successfully found important functions in gc");
+
+rconsolelog("Loading", "Loading functions");
+
+local KillallToggle = false;
+local Weaponry = {}; do
+    function Weaponry:IsVisible(Player, Part)
+        local Parts = Camera:GetPartsObscuringTarget({Camera.CFrame.Position, Player.Character[Part].Position}, {Player.Character})
+
+        for Index, Part in next, Parts do
+            if Part.Transparency == 1 or Part.CanCollide == false then
+                Parts[Index] = nil;
+            end
+        end
+
+        return #Parts == 0;
+    end
+
+    function Weaponry:IsNotSameTeam(Player, Toggle)
+        return not Toggle or Player.Team ~= LocalPlayer.Team;
+    end
+
+    function Weaponry:IsAlive(Player)
+        return Player and Player.Character and Player.Character:FindFirstChild("Humanoid") and Player.Character.Humanoid.Health > 0;
+    end
+
+    function Weaponry:IsOnScreen(Part)
+        local _, OnScreen = Camera:WorldToViewportPoint(Part.Position);
+
+        return OnScreen;
+    end
+
+    function Weaponry:IsInFOV(Player, FOVSize, Toggle)
+        local Vector, OnScreen = Camera:WorldToViewportPoint(Player.Character.HumanoidRootPart.Position);
+
+        return not Toggle or OnScreen and (Vector2.new(Vector.X, Vector.Y) - Vector2.new(Mouse.X, Mouse.Y)).Magnitude <= FOVSize;
+    end
+
+    function Weaponry:GetClosestToMouseInFov()
+        local ClosestPlayer = nil;
+        local ClosestDistance = math.huge;
+
+        for _, Player in next, Players:GetPlayers() do
+            if Player and Player ~= LocalPlayer and Player.Character and Player.Character:FindFirstChild("HumanoidRootPart") then
+                if self:IsNotSameTeam(Player, TeamCheck) and self:IsAlive(Player) and Player.Character:FindFirstChild("ForceField") == nil then
+                    local Distance = (Mouse.Hit.Position - Player.Character.HumanoidRootPart.Position).Magnitude;
+
+                    if Distance < ClosestDistance and self:IsOnScreen(Player.Character.HumanoidRootPart) then
+                        ClosestPlayer = Player;
+                        ClosestDistance = Distance;
+                    end
+                end
+            end
+        end
+
+        return ClosestPlayer;
+    end
+
+    function Weaponry:KillAll()
+        for _, Player in next, Players:GetChildren() do
+            if not KillallToggle then break; end
+
+            if Player ~= LocalPlayer and Player.Character and not Player.Character:FindFirstChild("ForceField") and self:IsNotSameTeam(Player, TeamCheck) then
+                local PlayerChar = Player.Character;
+
+                if PlayerChar and PlayerChar:FindFirstChild("HumanoidRootPart") and not PlayerChar:FindFirstChild("ForceField") and self:IsAlive(Player) then
+                    repeat task.wait();
+                        if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                            LocalPlayer.Character.HumanoidRootPart.CFrame = PlayerChar.HumanoidRootPart.CFrame * CFrame.new(0, 5, 0);
+                            Camera.CFrame = CFrame.new(Camera.CFrame.Position, (PlayerChar.Head.Position - Vector3.new(0, 2, 0)));
+
+                            pcall(FireWeapon);
+                        end
+                    until PlayerChar.Humanoid.Health <= 0 or not KillallToggle;
+                end
+            end
+        end
+    end
+end;
+
+local function Find(Table, Name)
+    for Index, Value in next, Table do
+        if typeof(Value) == "table" then
+            local Found = Find(Value, Name);
+
+            if Found then
+                return Found;
+            end
+        elseif typeof(Index) == "string" and Index == Name then
+            return Value;
+        end
+    end
+end
+
+local Window = Library:CreateWindow({
+    Title = string.format("Weaponry | %s", LocalPlayer.Name),
+    Center = true,
+    AutoShow = true,
+})
+
+local Tabs = {
+    ["Main Tab"] = Window:AddTab('Main'),
+    ['UI Settings'] = Window:AddTab('UI Settings'),
+};
+
+local MainTab = Tabs["Main Tab"]:AddLeftGroupbox("Main");
+
+MainTab:AddToggle("Silent Aim", {
+    Text = "Silent Aim",
+    Default = false,
+    Tooltip = "Redirects your bullets to the closest player to your mouse",
+})
+
+MainTab:AddToggle("Auto Reload", {
+    Text = "Auto Reload",
+    Default = false,
+    Tooltip = "Automatically reloads your weapon when it runs out of ammo",
+})
+
+MainTab:AddToggle("Inf Ammo", {
+    Text = "Inf Ammo",
+    Default = false,
+    Tooltip = "Makes your weapon have infinite ammo",
+})
+
+MainTab:AddToggle("Always Sprint", {
+    Text = "Always Sprint",
+    Default = false,
+    Tooltip = "Makes you always sprint",
+})
+
+MainTab:AddToggle("Funny Head", {
+    Text = "Makes your head go brrrr",
+    Default = false,
+    Tooltip = "Makes your head go brrrr on others screens",
+})
+
+local HeadChance = 25;
+MainTab:AddSlider("Head Chance", {
+    Text = "Hit Head Chance",
+    Default = 25,
+    Min = 0,
+    Max = 100,
+    Rounding = 1,
+    Compact = false,
+    Callback = function(HeadChanceValue)
+        HeadChance = HeadChanceValue;
+    end
+})
+
+MainTab:AddToggle("Big Head", {
+    Text = "Big Head Hitbox",
+    Default = false,
+    Tooltip = "Makes the enemies head bigger so you can hit people easier",
+})
+
+MainTab:AddToggle("Kill All", {
+    Text = "Kill All",
+    Default = false,
+    Tooltip = "Kills all players on the server",
+})
+
+rconsolelog("Info", "Successfully loaded functions");
+
+rconsolelog("Loading", "Hooking cat");
+
+local Raycast = require(Services.ReplicatedStorage.SharedModules.RayCat);
+
+local function RandomHit(Percentage)
+    local Random = Random.new();
+
+    return Random:NextNumber(0, 100) < Percentage and "Head" or "HumanoidRootPart";
+end
+
+local OldRayCast; OldRayCast = hookfunction(Raycast.cat, LPH_NO_UPVALUES(function(...)
+    local Args = {...};
+    local Position, Direction = Args[1], Args[2];
+    local Target = Weaponry:GetClosestToMouseInFov();
+    local RandomPart = RandomHit(HeadChance);
+
+    if Target and Toggles["Silent Aim"] then
+        local Character = Target.Character;
+        local HitPart = Character and Character:FindFirstChild(RandomPart);
+
+        if HitPart and Weaponry:IsVisible(Target, RandomPart) and Weaponry:IsInFOV(Target, 250, true) and Character:FindFirstChild("ForceField") == nil then
+            Direction = (HitPart.Position - Position).Unit * 1000;
+        end
+    end
+
+    return OldRayCast(Position, Direction, unpack(Args, 3));
+end))
+
+rconsolelog("Info", "Successfully hooked cat");
+
+rconsolelog("Loading", "Loading Gun Mods");
+
+local CurrentWeapons = nil;
+local Stats = nil;
+
+if not CurrentWeapons or not Stats then
+    repeat task.wait();
+        CurrentWeapons = debug.getupvalues(InventoryManager)[5];
+        Stats = debug.getupvalues(FireWeapon)[2];
+    until CurrentWeapons and Stats;
+end
+
+task.spawn(function()
+    while true do task.wait()
+        if Library.Unloaded then break; end
+
+        for _, Weapon in next, CurrentWeapons do
+            local CurrentAmmo = Find(Weapon, "CurrentAmmo");
+
+            if tonumber(CurrentAmmo) and tonumber(CurrentAmmo) == 0 and Toggles["Auto Reload"].Value then
+                ReloadWeapon();
+            end
+        end
+
+        if Toggles["Inf Ammo"].Value then
+            Stats = debug.getupvalue(FireWeapon, 2);
+
+            if Stats and Stats.WeaponStats then 
+                Services.ReplicatedStorage.Remotes.WeaponHandler:FireServer(3, Stats);
+                Stats.CurrentAmmo = Stats.WeaponStats.MaxAmmo;
+            end
+        end
+    end
+end)
+
+task.spawn(function()
+    while true d
+  end
+})
+Tab:AddButton({
+  Name = "杀死全部、ESP+",
+  Callback = function ()
+     loadstring(game:HttpGet("https://jumblescripts.com/Weaponry.lua"))()
+  end
+})
+Tab:AddParagraph("有些是电脑端手机用不了")
