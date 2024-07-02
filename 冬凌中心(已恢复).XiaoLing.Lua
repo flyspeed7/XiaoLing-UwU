@@ -3911,3 +3911,152 @@ Tab:AddButton({
 loadstring(game:HttpGet('https://raw.githubusercontent.com/x2FIWz/SCRIPT/main/MOBILE/METAWARE.lua'))()
   	end
 })
+local Tab= Window:MakeTab({
+	Name = "Slo's RNG",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "Eggs-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/EGGSolsRNG'))()
+  end
+})
+Tab:AddButton({
+  Name = "Hm-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Looser3itx/Hmmmmmmmmmmmmmmmmmmmmmmmmmmmm/main/loader.lua"))()
+  end
+})
+Tab:AddButton({
+  Name = "King-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/RNG/main/Sol"))()
+  end
+})
+local Tab= Window:MakeTab({
+	Name = "写一封信",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "Letter-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/insuretya/writealetter/main/writtealetter.lua')))()
+  end
+})
+Tab:AddButton({
+  Name = "自动注译",
+  Callback = function ()
+_G.AutoInfNotes = false
+while _G.AutoInfNotes == true do
+
+ 
+local A_1 = "made by demo"
+local A_2 = false
+local Event = game:GetService("ReplicatedStorage").COM.Game.RequestTakeNote
+Event:InvokeServer(A_1, A_2)
+
+end
+
+  end
+})
+Tab:AddButton({
+  Name = "免费动画",
+  Callback = function ()
+    for _,v in pairs(game.ReplicatedStorage.Emotes.Packs:GetChildren()) do
+   local anim = require(v)
+   anim.Required = false;
+end
+
+  end
+})
+Tab:AddButton({
+  Name = "免费动画-脚本",
+  Callback = function ()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/lobox920/Shar-Script/main/Write%20a%20Letter.lua')))()
+  end
+})
+Tab:AddButton({
+  Name = "无限文本",
+  Callback = function ()
+    local text = "infinite notes made by tabz[#[9432"
+--[[
+   __                __                 
+  /  |              /  |                
+ _$$ |_     ______  $$ |____   ________ 
+/ $$   |   /      \ $$      \ /        |
+$$$$$$/    $$$$$$  |$$$$$$$  |$$$$$$$$/ 
+  $$ | __  /    $$ |$$ |  $$ |  /  $$/  
+  $$ |/  |/$$$$$$$ |$$ |__$$ | /$$$$/__ 
+  $$  $$/ $$    $$ |$$    $$/ /$$      |
+   $$$$/   $$$$$$$/ $$$$$$$/  $$$$$$$$/ 
+                                        
+                                        
+                                        
+
+Inf Notes Script by tabz#9432 | I GET BANNED ALLOT SO IT MIGHT NOT BE ACCURATE
+https://www.roblox.com/games/8425637426/Write-a-Letter
+]]--
+while wait() do
+local args = {
+    [1] = text,
+    [2] = false
+}
+wait()
+game:GetService("ReplicatedStorage").COM.Game.RequestTakeNote:InvokeServer(unpack(args))
+local args = {
+    [1] = "Drop"
+}
+game:GetService("Players").LocalPlayer.Character.Note.ClassEvent:FireServer(unpack(args))
+end 
+
+  end
+})
+Tab:AddButton({
+  Name = "消除文本",
+  Callback = function ()
+    --[[
+   __                __                 
+  /  |              /  |                
+ _$$ |_     ______  $$ |____   ________ 
+/ $$   |   /      \ $$      \ /        |
+$$$$$$/    $$$$$$  |$$$$$$$  |$$$$$$$$/ 
+  $$ | __  /    $$ |$$ |  $$ |  /  $$/  
+  $$ |/  |/$$$$$$$ |$$ |__$$ | /$$$$/__ 
+  $$  $$/ $$    $$ |$$    $$/ /$$      |
+   $$$$/   $$$$$$$/ $$$$$$$/  $$$$$$$$/ 
+                                        
+                                        
+                                        
+
+Clear everyone's Notes Script by tabz#9432 | I GET BANNED ALLOT SO IT MIGHT NOT BE ACCURATE
+https://www.roblox.com/games/6423728755/new-physics-engine
+]]--
+while wait() do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-67, 4, 95)
+wait()
+local args = {
+    [1] = workspace.BulletinBoards.Notes.Note
+}
+wait()
+game:GetService("ReplicatedStorage").COM.Game.RequestPinPickUp:InvokeServer(unpack(args))
+local args = {
+    [1] = "Drop"
+}
+game:GetService("Players").LocalPlayer.Character.Note.ClassEvent:FireServer(unpack(args))
+end 
+
+  end
+})
+local Tab= Window:MakeTab({
+	Name = "The Rake",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "Source-Hub",
+  Callback = function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/RakeEvolved/Stable/Source.lua"))()
+  end
+})
