@@ -4061,7 +4061,7 @@ Tab:AddButton({
   end
 })
 local Tab= Window:MakeTab({
-	Name = "玩家",
+	Name = "💮武器库💮",
 	Icon = "rbxassetid://7733779610",
 	PremiumOnly = false
 })
