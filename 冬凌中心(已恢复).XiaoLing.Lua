@@ -4161,11 +4161,18 @@ end)
   end
 })
 Tab:AddButton({
-  Name = "自瞄、区分墙壁、团队",
+  Name = "自瞄、区分墙壁、团队(卡密↓)",
   Callback = function ()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dustin21335/Universal-aimbot-Roblox/main/Aimbot.lua"))()
   end
 })
+Tab:AddButton({
+	Name = "复制卡密↑",
+	Callback = function()
+	setclipboard("Aim2143")
+end
+})
+Tab:AddParagraph("C屎人提供👍")
 Tab:AddButton({
   Name = "Index-Hub",
   Callback = function ()
