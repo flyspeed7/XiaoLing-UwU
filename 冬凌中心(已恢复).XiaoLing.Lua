@@ -3301,6 +3301,13 @@ Tab:AddButton({
 	PremiumOnly = false
 })
 Tab:AddButton({
+  Name = "Warriors-Hub",
+  Callback = function ()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/leakediz/top-g/main/combat%20warriors"))() 
+  end
+})
+
+Tab:AddButton({
   Name = "电脑端Combat-Hub",
   Callback = function ()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/frkfx/Combat-Warriors/main/Script"))()
@@ -3357,7 +3364,7 @@ Tab:AddButton({
        end
    end
 end
-game.StarterGui:SetCore("SendNotification", {Title = "CB", Text = "Script loaded, "..game.Players.LocalPlayer.DisplayName..".", Duration = 4,})
+game.StarterGui:SetCore("SendNotification", {Title = "开启成功", Text = "Script loaded, "..game.Players.LocalPlayer.DisplayName..".", Duration = 4,})
   end
 })
 Tab:AddButton({
@@ -3373,7 +3380,7 @@ Tab:AddButton({
   end
 })
 Tab:AddButton({
-  Name = "自动盾反",
+  Name = "自动盾反菜",
   Callback = function ()
     local lp = game.Players.LocalPlayer
 
