@@ -83,7 +83,7 @@ TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
 TextLabel.Font = Enum.Font.GothamBold
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
-TextLabel.Text = "这里是:冬凌中心1.3.9喵~"
+TextLabel.Text = "冬凌：欢迎主人~喵~"
 TextLabel.Parent = ScreenGui
 
 local function animateCredits()
@@ -247,7 +247,7 @@ end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/XiaoLing-OrionLib.WEN/main/%E5%B0%8F%E5%87%8C.UI.Lua"))()
-local Window = OrionLib:MakeWindow({IntroText = "感谢"..game.Players.LocalPlayer.Name.."使用冬凌中心",Name = "冬凌中心-1.3.9-WEN", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
+local Window = OrionLib:MakeWindow({IntroText = "你好主人~欢迎使用冬凌中心!",Name = "冬凌中心-1.4.2-撅我!", HidePremium = false, SaveConfig = true, ConfigFolder = "大哥这缝合脚本啊"})
 local about = Window:MakeTab({
     Name = "₪信息",
     Icon = "rbxassetid://7743878358",
