@@ -4536,3 +4536,16 @@ Tab:AddButton({
   end
 })
 Tab:AddParagraph("有一些是电脑用的脚本😋")
+
+local Tab= Window:MakeTab({
+	Name = "老大出租车",
+	Icon = "rbxassetid://7733779610",
+	PremiumOnly = false
+})
+Tab:AddButton({
+  Name = "Raw.Mani",
+  Callback = function ()
+    loadstring(game:HttpGet("https://pastebin.com/raw/5ScA4pR9"))()
+  end
+})
+Tab:AddParagraph("C屎人提供，谢谢")
